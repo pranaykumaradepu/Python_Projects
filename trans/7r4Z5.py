@@ -27,6 +27,9 @@ def encode_text(text):
         'y': 'h', 'Y': 'h',
         'z': 'N', 'Z': 'N'
     }
+    # The return statement below processes each character of the input text using the translation_map.
+    # It replaces each character with its corresponding value in the map and concatenates them into a single string.
+    # If a character is not found in the translation_map, it is added to the result unchanged.
     return ''.join(translation_map.get(char, char) for char in text)
 
 st = input("Enter your text: ")
