@@ -1,0 +1,5 @@
+---- Daily Journal Entries ----
+[Number of Entries] | [Date] | [Entry Text]
+----------------------------------
+[Entry-1] | 2026-01-08 | this is test
+[Entry-2] | 2026-01-08 | this is test 2

@@ -1,0 +1,7 @@
+name,math,science,english,average,status
+Alice Johnson,50,60,70,60.0,pass
+Bob Smith,80,70,60,70.0,pass
+Charlie Brown,90,80,70,80.0,pass
+Diana Prince,70,90,80,80.0,pass
+Ethan Hunt,60,50,90,66.67,pass
+Jhon,50,30,40,40.0,fail
