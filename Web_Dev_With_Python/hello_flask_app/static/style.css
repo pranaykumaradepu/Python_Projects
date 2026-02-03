@@ -1,0 +1,27 @@
+body {
+    background-color:gradient(to right, #434343, #000000);
+    font-family: Arial, sans-serif;
+}
+
+h1, p {
+    text-align: center;
+    font-size: 24px;
+    color: rgb(218, 160, 85);
+}
+
+button a {
+    text-decoration: none;
+    color: black;
+}
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8px;
+    background-color: peachpuff;
+    border: none;
+    border-radius: 20px;
+}
