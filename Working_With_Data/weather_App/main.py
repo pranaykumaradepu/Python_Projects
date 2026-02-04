@@ -4,7 +4,7 @@ import requests
 import time
 
 # step 1 : Api setup 
-api_key = '66e4fc61547e0ff125cb0e8e9950c72c'
+api_key = 'Your Api Key'
 baase_url = f'https://api.openweathermap.org/data/2.5/weather'
 
 # step 2: Get weather data
