@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Portal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body class="{{ weather.condition_main if weather else 'Clear' }}">
+
+    <div class="glass-card">
+        
+        <form method="POST" class="search-container">
+            <input type="text" name="city" class="search-input" placeholder="Search City..." autocomplete="off" required>
+        </form>
+
+        {% if weather %}
+            {% if weather.error %}
+                <div class="error-msg">{{ weather.error }}</div>
+            {% else %}
+                <div class="weather-main">
+                    <h2 class="city-name">{{ weather.city }}</h2>
+                    <div class="weather-icon-container">
+                        <img class="weather-icon" src="http://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="icon">
+                        <span class="description">{{ weather.description }}</span>
+                    </div>
+                    <h1 class="temperature">{{ weather.temperature }}°</h1>
+                </div>
+
+                <div class="details-grid">
+                    <div class="detail-item">
+                        <span class="detail-value">{{ weather.humidity }}%</span>
+                        <span class="detail-label">Humidity</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-value">{{ weather.wind_speed }} m/s</span>
+                        <span class="detail-label">Wind Speed</span>
+                    </div>
+                </div>
+            {% endif %}
+        {% else %}
+            <div class="weather-main">
+                <h1 class="temperature" style="font-size: 4rem;">Hello</h1>
+                <p class="welcome-text">Where are you today?</p>
+            </div>
+        {% endif %}
+
+    </div>
+
+</body>
+</html>

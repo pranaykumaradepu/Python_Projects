@@ -30,6 +30,7 @@ Integrating external data, file handling, and web automation.
 * **Daily Journal Logger:** Persistent storage for daily notes.
 * **Student Report Generator:** Automate the creation of academic reports.
 
+### 5. Web Development With Python
 ---
 
 ## 🚀 How to Run
