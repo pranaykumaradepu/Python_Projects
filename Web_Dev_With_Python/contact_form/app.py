@@ -24,8 +24,6 @@ class ContactForm(FlaskForm):
 def contact():
     form = ContactForm()
     if form.validate_on_submit():
-        # 'success' matches the CSS class
-        flash(f'Thank you, {form.name.data}! Your message has been sent.', 'success')
         return redirect(url_for('success'))
     return render_template('contact.html', form=form)
 
