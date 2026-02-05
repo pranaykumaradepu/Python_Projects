@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif; /* Cleaner, more modern font */
+}
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    /* Mesh Background with low red */
+    background-color: #e4eff1;
+    background-image: 
+        radial-gradient(at 0% 100%, rgba(255, 59, 48, 0.25) 0px, transparent 40%), /* Reduced red opacity and spread */
+        radial-gradient(at 100% 0%, rgba(173, 216, 230, 0.4) 0px, transparent 50%), 
+        radial-gradient(at 100% 100%, rgba(255, 230, 200, 0.3) 0px, transparent 50%), 
+        radial-gradient(at 0% 0%, rgba(255, 255, 255, 0.6) 0px, transparent 50%);
+    background-attachment: fixed;
+    overflow: hidden;
+    
+    /* Layout fix */
+    display: flex;
+    justify-content: center; /* Keeps card centered horizontally */
+}
+
+.app-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5vh; /* This pushes the title and card down from the very top */
+    width: 100%;
+}
+
+.app-header {
+    margin-bottom: 40px; /* Space between title and card */
+    text-align: center;
+}
+
+.app-header h1 {
+    font-size: 2.2rem;
+    font-weight: 500;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.6);
+    margin: 0;
+}
+
+/* Glass Card - existing styles stay the same, but remove auto-margins if any */
+.glass-card {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(30px) saturate(150%);
+    -webkit-backdrop-filter: blur(30px) saturate(150%);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    padding: 50px 40px;
+    width: 90%;
+    max-width: 450px;
+    color: #333;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.search-input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.temperature, .city-name, .description, .detail-value {
+    color: #222; /* Ensuring visibility */
+}
+
+/* Search Input - Ultra Minimal */
+.search-input {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(26, 21, 21, 0.3);
+    color: rgb(51, 50, 50);
+    font-size: 1.1rem;
+    outline: none;
+    text-align: left;
+    transition: border-color 0.3s;
+    margin-bottom: 40px;
+}
+
+
+.search-input:focus {
+    border-bottom: 1px solid rgb(64, 64, 64);
+}
+
+/* Weather Main Layout */
+.weather-main {
+    text-align: left; /* Aligned left like your reference image */
+}
+
+.city-name {
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.9;
+}
+
+.date-text {
+    font-size: 0.9rem;
+    font-weight: 300;
+    opacity: 0.7;
+    margin-top: 10px;
+}
+
+.temp-container {
+    display: flex;
+    align-items: flex-start;
+    margin: 20px 0;
+}
+
+.temperature {
+    font-size: 8rem;
+    font-weight: 200;
+    letter-spacing: -5px;
+    line-height: 1;
+}
+
+.weather-info-side {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.weather-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.description {
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+/* Bottom Metrics - Thin & Clean */
+.details-grid {
+    display: flex;
+    justify-content: flex-start;
+    gap: 30px;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.detail-value {
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.detail-label {
+    display: none; /* We use icons/symbols instead for the modern look */
+}

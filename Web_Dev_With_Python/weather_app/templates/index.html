@@ -3,50 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather Portal</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Modern Weather API</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
+<body>
+    <div class="app-wrapper">
+        <header class="app-header">
+            <h1>Weather App</h1>
+        </header>
 
-<body class="{{ weather.condition_main if weather else 'Clear' }}">
+        <div class="glass-card">
+            <div class="search-container">
+                <input type="text" id="cityInput" class="search-input" placeholder="ENTER CITY..." autocomplete="off">
+            </div>
 
-    <div class="glass-card">
-        
-        <form method="POST" class="search-container">
-            <input type="text" name="city" class="search-input" placeholder="Search City..." autocomplete="off" required>
-        </form>
+            <div id="weatherDisplay" class="weather-main" style="display: none;">
+                <h2 id="cityName" class="city-name">---</h2>
+                <p class="date-text">TODAY</p>
 
-        {% if weather %}
-            {% if weather.error %}
-                <div class="error-msg">{{ weather.error }}</div>
-            {% else %}
-                <div class="weather-main">
-                    <h2 class="city-name">{{ weather.city }}</h2>
-                    <div class="weather-icon-container">
-                        <img class="weather-icon" src="http://openweathermap.org/img/wn/{{ weather.icon }}@2x.png" alt="icon">
-                        <span class="description">{{ weather.description }}</span>
+                <div class="temp-container">
+                    <h1 id="tempDisplay" class="temperature">0°</h1>
+                    <div class="weather-info-side">
+                        <img id="weatherIcon" class="weather-icon" src="" alt="">
+                        <span id="description" class="description">---</span>
                     </div>
-                    <h1 class="temperature">{{ weather.temperature }}°</h1>
                 </div>
 
                 <div class="details-grid">
                     <div class="detail-item">
-                        <span class="detail-value">{{ weather.humidity }}%</span>
-                        <span class="detail-label">Humidity</span>
+                        <span class="detail-value">💧 <span id="humidity">0</span>%</span>
                     </div>
                     <div class="detail-item">
-                        <span class="detail-value">{{ weather.wind_speed }} m/s</span>
-                        <span class="detail-label">Wind Speed</span>
+                        <span class="detail-value">🌬️ <span id="wind">0</span> m/s</span>
                     </div>
                 </div>
-            {% endif %}
-        {% else %}
-            <div class="weather-main">
-                <h1 class="temperature" style="font-size: 4rem;">Hello</h1>
-                <p class="welcome-text">Where are you today?</p>
             </div>
-        {% endif %}
-
+            
+            <div id="welcomeMessage" class="weather-main">
+                <h1 class="temperature" style="font-size: 3rem;">Hello</h1>
+                <p class="date-text">Ready to check the sky?</p>
+            </div>
+        </div>
     </div>
 
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>
 </html>
