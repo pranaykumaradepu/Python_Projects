@@ -1,0 +1,139 @@
+/* Import a modern font from Google */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f3f4f6; /* Soft gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* The White Card Container */
+.container {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+h1 {
+    text-align: center;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+/* Form Styling */
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #374151;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+input {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box; /* Ensures padding doesn't break width */
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4f46e5; /* Indigo highlight on focus */
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+/* Modern Button */
+button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4f46e5; /* Modern Indigo */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #4338ca;
+}
+
+/* Flash Messages */
+.alert {
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+.alert.error {
+    background-color: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.alert.success {
+    background-color: #d1fae5;
+    color: #065f46;
+    border: 1px solid #a7f3d0;
+}
+
+/* Link at bottom */
+.footer-link {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.footer-link a {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-link a:hover {
+    text-decoration: underline;
+}
+
+/* Add to static/css/style.css */
+
+.success-toast {
+    position: fixed;       /* Floats on top of everything */
+    top: 20px;            /* 20px from the top */
+    left: 50%;            /* Center horizontally */
+    transform: translateX(-50%); /* Perfect centering */
+    background-color: #10b981;   /* Nice Green */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;  /* Rounded pill shape */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    font-weight: 600;
+    z-index: 1000;        /* Ensure it sits on top of other elements */
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -20px); }
+    to { opacity: 1; transform: translate(-50%, 0); }
+}
