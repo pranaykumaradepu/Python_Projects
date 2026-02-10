@@ -31,7 +31,14 @@ Integrating external data, file handling, and web automation.
 * **Student Report Generator:** Automate the creation of academic reports.
 
 ### 5. Web Development With Python
----
+Building web apps and APIs using Flask and related tooling.
+* **Hello Flask App:** A minimal Flask starter app for routing and templates.
+* **Weather App:** A Flask-based UI that fetches and displays weather data.
+* **Contact Form:** Submit form data and handle basic validation.
+* **User Registration App:** User signup flow with form handling and validation.
+* **Portfolio App:** A multi-page personal portfolio website.
+* **Personal Blog Website:** A blog-style site with posts, templates, and styling.
+
 
 ## 🚀 How to Run
 1. Clone the repository:
