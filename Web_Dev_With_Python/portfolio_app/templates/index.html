@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+
+{% block title %}Home - Pranay's Portfolio{% endblock %}
+
+{% block content %}
+
+<section class="hero-section" style="text-align: center; padding: 4rem 1rem 6rem;">
+    <h1 style="font-size: 3.5rem; margin-bottom: 1.5rem; color: var(--secondary-color);">
+        Hi, I'm <span style="color: var(--primary-color);">Pranay</span>.
+    </h1>
+    <p style="font-size: 1.25rem; color: #64748b; max-width: 700px; margin: 0 auto 2.5rem;">
+        A backend developer specializing in <strong>Python</strong>, <strong>Django</strong>, and <strong>scalable web solutions</strong>. 
+        I build robust applications that solve real-world problems.
+    </p>
+    <div style="display: flex; gap: 1rem; justify-content: center;">
+        <a href="{{ url_for('projects') }}" class="btn">View My Work</a>
+        <a href="{{ url_for('contact') }}" class="btn" style="background: white; color: var(--primary-color); border: 2px solid var(--primary-color);">Contact Me</a>
+    </div>
+</section>
+
+<section class="tech-stack" style="background: white; padding: 3rem; border-radius: 12px; margin-bottom: 4rem; box-shadow: var(--shadow);">
+    <h2 style="text-align: center; margin-bottom: 2rem;">My Tech Stack</h2>
+    <div class="skills-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem;">
+        <div class="skill-item" style="text-align: center;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="60" alt="Python">
+            <p style="margin-top: 0.5rem; font-weight: 600;">Python</p>
+        </div>
+        <div class="skill-item" style="text-align: center;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg" width="60" alt="Django">
+            <p style="margin-top: 0.5rem; font-weight: 600;">Django</p>
+        </div>
+        <div class="skill-item" style="text-align: center;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" width="60" alt="Flask">
+            <p style="margin-top: 0.5rem; font-weight: 600;">Flask</p>
+        </div>
+        <div class="skill-item" style="text-align: center;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" width="60" alt="PostgreSQL">
+            <p style="margin-top: 0.5rem; font-weight: 600;">SQL</p>
+        </div>
+        <div class="skill-item" style="text-align: center;">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" width="60" alt="Git">
+            <p style="margin-top: 0.5rem; font-weight: 600;">Git</p>
+        </div>
+    </div>
+</section>
+
+<section class="featured-projects">
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+        <h2>Featured Projects</h2>
+        <a href="{{ url_for('projects') }}" style="color: var(--primary-color); text-decoration: none; font-weight: bold;">View All &rarr;</a>
+    </div>
+
+    <div class="projects">
+        {% for project in projects %}
+        <div class="project">
+            {% if 'http' in project.image %}
+                <img src="{{ project.image }}" alt="{{ project.title }}">
+            {% else %}
+                <img src="{{ url_for('static', filename='images/' + project.image) }}" alt="{{ project.title }}">
+            {% endif %}
+            
+            <h3>{{ project.title }}</h3>
+            <p>{{ project.description[:100] }}...</p> <a href="{{ url_for('project_detail', project_id=project.id) }}">View Details</a>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+<section class="cta-section">
+    <h2>Let's Build Something Amazing.</h2>
+    <p>
+        I’m currently open to new opportunities and freelance projects. 
+        Have a project in mind? Let’s turn that idea into reality.
+    </p>
+    <a href="{{ url_for('contact') }}" class="cta-button">Get in Touch &rarr;</a>
+</section>
+
+{% endblock %}
