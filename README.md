@@ -1,39 +1,12 @@
-# Python Projects Collection 🐍
+# Web Development Projects
 
-A comprehensive collection of Python projects ranging from basic scripting to object-oriented programming and data-driven applications.
+The `Web_Dev_With_Python` folder contains several projects that utilize Python to create dynamic web applications. These projects showcase various frameworks and libraries to develop user-friendly web interfaces and back-end services. Some of the technologies used include Flask, Django, and HTML/CSS for structure and styling.
 
-## 📂 Project Structure
+## Projects Overview
 
-This repository is organized into four main categories based on complexity and focus:
+- **Project 1**: A simple blogging platform using Flask.
+- **Project 2**: A RESTful API developed with Django that handles user authentication and data storage.
+- **Project 3**: A personal portfolio website showcasing web development skills and projects.
+- **Project 4**: A to-do list application demonstrating CRUD operations using Flask.
 
-### 1. Basic 🟢
-Foundational scripts to master Python syntax and logic.
-* **Shopping List:** A simple CLI tool to manage daily groceries.
-
-### 2. Intermediate 🟡
-Focuses on logic building and functional programming.
-* **Contact Book:** Manage and store contact information.
-* **Student Grade Manager:** Calculate and track academic performance.
-* **Password Generator:** Create secure, randomized passwords.
-* **Temperature Converter:** Convert units between Celsius, Fahrenheit, and Kelvin.
-
-### 3. Object-Oriented Programming (OOP) 🔵
-Projects built using Classes and Objects to model real-world systems.
-* **Employee Management System:** Handle staff records and payroll logic.
-* **Bank Account Simulator:** Basic banking operations including deposits and withdrawals.
-* **Animal Sound Simulator:** Demonstrating polymorphism and inheritance.
-
-### 4. Working With Data 🟣
-Integrating external data, file handling, and web automation.
-* **Weather App:** Fetch real-time weather data via APIs.
-* **Wikipedia Scraper:** Extract information directly from the web.
-* **Daily Journal Logger:** Persistent storage for daily notes.
-* **Student Report Generator:** Automate the creation of academic reports.
-
-### 5. Web Development With Python
----
-
-## 🚀 How to Run
-1. Clone the repository:
-   ```bash
-   git clone [https://github.com/pranaykumaradepu/Python_Projects.git](https://github.com/pranaykumaradepu/Python_Projects.git)
+Each project contains detailed README files that provide setup instructions and usage guidelines.
